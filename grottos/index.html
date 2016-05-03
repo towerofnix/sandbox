@@ -1,0 +1,5041 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title>Dragon Quest IX Grottoes</title>
+    <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+    <script src='pre-fixer.js'></script>
+    <style type="text/css">
+
+      /* General */
+
+      table {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        width: 100%;
+      }
+
+      td, th {
+        padding: 3px;
+        text-align: center;
+      }
+
+      tr:nth-child(odd) {
+        background: #BBDDFF;
+      }
+
+      /* Multiple columns */
+
+      body > section {
+        -webkit-column-count: 2;
+           -moz-column-count: 2;
+                column-count: 2;
+        /*
+        -webkit-column-width: 500px;
+           -moz-column-width: 500px;
+                column-width: 500px;
+        */
+        border-bottom: 1px solid black;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+      }
+
+      /* Print */
+
+      @page {
+        size: A4;
+      }
+
+      /*table, figure,*/
+      .no-page-break {
+        page-break-inside: avoid;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <noscript>
+      <section id='no-scripts'>
+        <p>Please enable scripts to have this document render properly.</p>
+      </section>
+    </noscript>
+
+    <section id='title-license'>
+      <header>
+        <h1>DRAGON QUEST IX 'GROTTO MECHANICS' GUIDE v1.00-pdf</h1>
+        <p>by Terence Fergusson &lt;tf_faq@btinternet.com&gt;<br>
+            reformatted into HTML by liam4 &lt;towerofnix@gmail.com&gt;</p>
+      </header>
+      <p>Dragon Quest IX Copyright 2009, 2010 ARMOR PROJECT/BIRD STUDIO/LEVEL-5/SQUARE ENIX; Copyright Koichi Sugiyama.</p>
+      <p>This document is entirely my work, and was written and is owned by me, Terence Fergusson. All copyrights and trademarks are acknowledged where not specifically mentioned. If you wish to reproduce this document AS IS, you may do so without having to ask my permission, providing that the entire document including this copyright notice is left intact, preferably in ASCII text format, and is done so for no-profit purposes. I do, however, reserve the right to revoke permission and ask for it to be taken down should I feel it necessary.</p>
+      <p>Please do not e-mail me about this guide. If you have questions or submissions to the knowledge base, please post on the GameFAQs message board; the information will get to the correct people quicker this way, and you have a far better chance of getting an answer expediently.</p>
+    </section>
+
+    <section id='version-history'>
+      <header>
+        <h1>Version History</h1>
+      </header>
+      <p>v1.00-html: 02/04/2016: Abandoned PDF/Pages version to rewrite in HTML due to technical issues</p>
+      <p>v1.00-pdf: 30/04/16: Re-created into a PDF format [using Apple’s Pages app]</p>
+      <p>v1.00: 28/10/10: Original Release</p>
+    </section>
+
+    <section id='table-of-contents'>
+      <header>
+        <h1>Contents</h1>
+      </header>
+      <!-- TODO: Create contents -->
+    </section>
+
+    <section id='0-meta'>
+      <header>
+        <h1>0. Meta</h1>
+        <p><i>The content in this section was written by liam4, not the original author.</i></p>
+      </header>
+      <section id='0-1-changes'>
+        <header>
+          <h2>0.1 Changes</h2>
+        </header>
+        <ul>
+          <li>
+            Some words have been changed, including:
+            <ul>
+              <li>grottoes -> grottoes</li>
+              <li>L(number) -> Lv. (number), Level (number)</li>
+              <li>labeled -> labelled</li>
+            </ul>
+          </li>
+          <li>Typos have been fixed.</li>
+          <li>Slight changes have been made to table explanations (etc) to make more sense with an HTML instead of text document.</li>
+          <li>
+            Capitalized Words have been made more consistent. The following words are capitalized when specifically talking about grotto, monster, or player statistics:
+            <ul>
+              <li>Main Character</li>
+              <li>Location, Grotto Boss, Boss, Unique Grotto</li>
+              <li>Lv. (Level), Vocation</li>
+              <li>Rank, Grotto Rank, Starting Monster Rank, Monster Rank, Chest Rank</li>
+              <li>Base Quality, Quality, Final Quality</li>
+              <li>Grotto Depth, Seed</li>
+              <li>Ruins, Cave, Ice, Water, Fire</li>
+            </ul>
+            The following words aren't capitalized:
+            <ul>
+              <li>grotto, grottoes</li>
+              <li>revocate</li>
+            </ul>
+          </li>
+          <li>Curly quotes (&lsquo;hello&rsquo; &ldquo;world&rdquo;) have been replaced with straight quotes. ('hello' "world")</li>
+          <li>
+            One sentence in <a href='#1-2-getting-started'>1.2 Getting Started</a> was removed. It had said:
+            <blockquote>
+              On top of that, although you than the very lowest ranks of grottoes until at least L30, and even that requires a lot of luck and having earned the highest level grottoes of the bottommost rank.
+            </blockquote>
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <section id='1-introduction'>
+      <header>
+        <h1>1. Introduction</h1>
+      </header>
+
+      <section id='1-1-about-grottoes'>
+        <header>
+          <h2>1.1 About Grottoes</h2>
+        </header>
+        <p>Grottoes are secret places located all around the world of Dragon Quest IX. Although there are only 150 locations where a grotto may be, there are hundreds of thousands of different grottoes accessible from those places. As such, it is impossible to find a grotto until you open a map that unlocks that specific grotto.</p>
+        <p>Grottoes are randomly generated according to a number of rules, so it is usually very difficult to ask how to find a particular grotto. Grottoes with the same name and level may be very different inside, even if they're found in the same location.</p>
+        <p>There are two types of grottoes available in Dragon Quest IX. One type contains only a single floor with a Legacy Boss waiting inside. These Legacy Bosses are storyline bosses from previous games in the Dragon Quest series, and are generally rewards from specific quests, particularly DLC ones.</p>
+        <p>This document, however, will cover the second and most common type of grotto, which are true random dungeons with treasure to be found and a grotto boss available at the end. We shall discuss how they are created, what may be found inside, how beset to identify them, and other related topics.</p>
+      </section>
+
+      <section id='1-2-getting-started'>
+        <header>
+          <h2>1.2 Getting Started</h2>
+        </header>
+        <p>Your first grotto is likely to be earned from completing Quest #015 'Collapsus's Call'. Unlike every other normal grotto map in the game, the reward for this is fixed, and will be a specific grotto ("Granite Tunnel of Woe Lv. 1") found in a specific location (just west of Stornway).</p>
+        <p>Each grotto of this type will have a boss at the very bottom floor. Defeating this boss will (almost without exception) give you a treasure map to a new random grotto elsewhere in the world, as well as a chance at a couple of rare items that each grotto boss may drop. The quality of this new grotto is, however, based on the level of the grotto and the level (and later revocation level) of your main character, so at the start, you will only be able to get low ranking grottoes.</p>
+        <p>This is considered a teaser into grottoes: you are not expected to be able to complete it straight away, as the first grotto boss is generally not easily taken on until you level up to mid-20s or higher, and future bosses only get more difficult. <!-- On top of that, although you than the very lowest ranks of grottoes until at least Level 30, and even that requires a lot of luck and having earned the highest level grottoes of the bottommost rank. --> While you can tackle them earlier, the game intends that grottoes be left after you have defeated the final boss of the storyline, where you will be better prepared for this postgame content.</p>
+      </section>
+
+      <section id='1-3-faq'>
+        <header>
+          <h2>1.3 FAQ</h2>
+          <p>I'll attempt to cover some common questions here where they'll be easy to find. However, I will be using terminology from the Glossary (Section 1.4) as well as data from later sections, so it's well worth reading those for more details if the short answer seems too confusing. Furthermore, asking on the GameFAQs Message Board will often give a more direct response if there's a particular point you don't understand.</p>
+        </header>
+        <dl>
+          <dt>Where is "&lt;name of grotto&gt;" located?</dt>
+          <dd>
+            <p>Other than the grotto you were given by Collapses at the end of his quest, the locations of all grottoes are randomly chosen from one of 150 possibilities. While lower rank grottoes can only pick from the first 47 of these locations, this still leaves a rather large number off possibilities. Since the location of any grotto is random, it is almost impossible to tell you where you'll find a specific grotto, especially if all you tell us is the name.</p>
+            <p>However, there are two main resources that can help:</p>
+            <dl>
+              <dt><a href='http://dq9.ffsky.cn/maplocation.htm'>http://dq9.ffsky.cn/maplocation.htm</a></dt>
+              <dd>A list of all 150 locations labelled with a hexadecimal number from 01 to 96. This is the in game order and is used to precisely identify specific locations for grottoes. Since I'm unaware of a site that lists the location images labelled in decimal format, I will use the hexadecimal IDs in Section 4 "Grotto Identification Lists", even though the decimal IDs are used elsewhere in this guide.</dd>
+              <dt><a href='http://dq9.kalos.comoj.com/'>http://dq9.kalos.comoj.com/</a></dt>
+              <dd>A site that allows you to filter locations by various landmarks you can see on your map, in order to search through the images very quickly. For example, you could select only those maps that have water and don't have trees. While not completely accurate (I noted at least one map that has mountains but was marked as not having any), it can be a way to quickly narrow down the possibilities.</dd>
+            </dl>
+          </dd>
+          <dt>Why won't Treasure Eye Land and Nose for Treasure work in grottoes?</dt>
+          <dd>
+            <p>Both Treasure Eye Land and Nose for Treasure only work on red treasure chests (which never reset and always have set rewards). Since grottoes only contain blue treasure chests (which have random contents and can be opened multiple times), these abilities will not detect these chests.</p>
+            <p>Treasure Eye Land will, however, detect the staircases in uncompleted grottoes, which can allow you to reach the bottom of new grottoes a bit faster than you might normally.</p>
+          </dd>
+          <dt>Why wasn't the boss there when I reached the bottom of the grotto?</dt>
+          <dd><p>When the boss of a grotto is defeated and you leave the grotto, the grotto stays completed until you reset it. You can reset it very easily by simply closing the treasure map or opening up a different treasure map. Naturally, this also means that since treasure maps start closed when you reload at a Church, that all grottoes are reset at this time.</p></dd>
+          <dt>Why didn't I get a new treasure map after completing my grotto?</dt>
+          <dd><p>The 12th Grotto Boss, only found in Rank 10+ Grottos, drops a Yggdrasil Leaf as its 100% drop instead of a treasure map. You can not get normal treasure maps from this boss as a result. It does have a small chance of dropping the treasure map leading to the Dragonlord Legacy Boss, though.</p></dd>
+        </dl>
+        <dt>How can I find a grotto with Moai Minstrels?</dt>
+        <dd>
+          <p>The absolute minimum Base Quality for Moai Minstrels is 93, at which point you have a 0.57% chance of getting a grotto that will contain them. This quickly improves to 5.04% by 100 BQ, and further to 10.08% by 110 BQ. Higher Quality beyond this produces continually better chances at seeing them, with it levelling off at just over a third of all grottoes containing them by 155 BQ.</p>
+          <p>To reach 100 BQ, your main character's highest level in any vocation added to the level of the grotto you completed to get a new map must equal 100. It's difficult to see grottoes that are high level enough for this before your main character is at least Lv. 50. Even then, 100 BQ only results in a 5% chance that your new treasure map will lead to a grotto containing Moai Minstrels, so consider levelling some more if you have troubles.</p>
+        </dd>
+        <dt>How can I find a grotto with Bling Badgers?</dt>
+        <dd>
+          <p>Since Bling Badgers are only found in Water Grottos, you will never have more than a 10% chance of getting a map to a grotto with them in. Furthermore, the minimum Base Quality required is 130, which gives you a starting chance of 0.22%. By 150 BQ, the chance has increased to 1.53%, and it only really starts to rise by around 180 BQ (4.30%).</p>
+          <p>Put simply, you'll likely need to be around Lv. 90+ clearing Lv. 90+ grottos before you have a respectable chance of seeing them. There's always the chance that you could find one early though, so keep a look out for any promising Water-type names.</p>
+        </dd>
+        <dt>How can I find higher level grottos?</dt>
+        <dd>
+          <p>The short answer is usually 'level up'. The higher your Base Quality, the better chance you have of getting higher level grottos. And the only ways to increase your Base Quality are to increase your main character's highest Vocation Level or to complete higher level grottos. You can also revocate (reset a Level 99 location back to Level 1) to get bonuses to Base Quality, but by the time you can revocate, you're nearing the limit for grotto level anyhow.</p>
+          <p>It is, of course, possible to get as far as, say, a grotto of Level 68 without levelling higher than Level 35. This requires a lot of luck though, since to generate Rank 2 Grottos, you need a Lv. 17+ grotto, and to generate Rank 3 would require a Lv. 22+ grotto. Rank 4 would require a Lv. 35+ grotto, which is tough since the maximum level that you can get from Rank 3 is 38. And Rank 5 requires a Lv. 40+ grotto. Finally, to reach Rank 6, you'd need a Lv. 58+ grotto, and Rank 5 Grottos only generate up to Lv. 59 if you're very lucky. Rank 7 would be completely out of your reach at this level, since you'd need a Lv. 75+ grotto, but only Rank 6 Grottos can never be that high level.</p>
+          <p>To help answer questions on how high you have to level to reach certain level maps, here's a couple of tables related to this. The first shows the Quality and Level Range that each Grotto Rank has, as well as the Minimum Vocation Level required to break into that Grotto Rank simply by exploring lower ranked Grottos. (In this table, 'Rv1' stands for 1st Revocation: it's impossible to get Rank 12 Grottos before you have relocated for the 1st time.)</p>
+          <table>
+            <tr>
+              <th>Grotto Rank</th>
+              <th>Quality</th>
+              <th>Grotto Level Range</th>
+              <th>Minimum Revocation Level Required</th>
+            </tr>
+            <tr>
+              <td>Rank 1</td>
+              <td>2-55</td>
+              <td>1-23</td>
+              <td>---</td>
+            </tr>
+            <tr>
+              <td>Rank 2</td>
+              <td>56-60</td>
+              <td>4-32</td>
+              <td>29</td>
+            </tr>
+            <tr>
+              <td>Rank 3</td>
+              <td>61-75</td>
+              <td>7-38</td>
+              <td>29</td>
+            </tr>
+            <tr>
+              <td>Rank 4</td>
+              <td>76-80</td>
+              <td>16-53</td>
+              <td>32</td>
+            </tr>
+            <tr>
+              <td>Rank 5</td>
+              <td>81-100</td>
+              <td>19-59</td>
+              <td>32</td>
+            </tr>
+            <tr>
+              <td>Rank 6</td>
+              <td>101-120</td>
+              <td>31-68</td>
+              <td>34</td>
+            </tr>
+            <tr>
+              <td>Rank 7</td>
+              <td>121-140</td>
+              <td>40-80</td>
+              <td>42</td>
+            </tr>
+            <tr>
+              <td>Rank 8</td>
+              <td>141-160</td>
+              <td>46-89</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>Rank 9</td>
+              <td>161-180</td>
+              <td>49-92</td>
+              <td>59</td>
+            </tr>
+            <tr>
+              <td>Rank 10</td>
+              <td>181-200</td>
+              <td>58-99</td>
+              <td>74</td>
+            </tr>
+            <tr>
+              <td>Rank 11</td>
+              <td>201-220</td>
+              <td>46-99</td>
+              <td>85</td>
+            </tr>
+            <tr>
+              <td>Rank 12</td>
+              <td>221-248</td>
+              <td>55-99</td>
+              <td>Rv1</td>
+            </tr>
+          </table>
+          <p>The second table shows the minimum levels required to have a particular chance at higher level grottoes. As an example, if you're exploring a Lv. 15 Grotto, then you'd need to be Level 38 in your highest Vocation in order to have at least a 20% chance of getting a treasure map from it that has a level higher than 15. 'Min' is the minimum level you need to be to get a higher map at all, and 'Max' is the level you need to be to always get a higher levelled map.</p>
+          <table>
+            <tr>
+              <th></th>
+              <th>Min</th>
+              <th>5%</th>
+              <th>20%</th>
+              <th>50%</th>
+              <th>90%</th>
+              <th>Max</th>
+            </tr>
+            <tr>
+              <td>Lv. 1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>61</td>
+            </tr>
+            <tr>
+              <td>Lv. 5</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>53</td>
+              <td>62</td>
+            </tr>
+            <tr>
+              <td>Lv. 10</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>44</td>
+              <td>51</td>
+              <td>74</td>
+            </tr>
+            <tr>
+              <td>Lv. 15</td>
+              <td>1</td>
+              <td>1</td>
+              <td>38</td>
+              <td>43</td>
+              <td>59</td>
+              <td>69</td>
+            </tr>
+            <tr>
+              <td>Lv. 20</td>
+              <td>1</td>
+              <td>33</td>
+              <td>37</td>
+              <td>44</td>
+              <td>61</td>
+              <td>92</td>
+            </tr>
+            <tr>
+              <td>Lv. 25</td>
+              <td>27</td>
+              <td>32</td>
+              <td>38</td>
+              <td>50</td>
+              <td>59</td>
+              <td>87</td>
+            </tr>
+            <tr>
+              <td>Lv. 30</td>
+              <td>22</td>
+              <td>34</td>
+              <td>43</td>
+              <td>48</td>
+              <td>69</td>
+              <td>82</td>
+            </tr>
+            <tr>
+              <td>Lv. 35</td>
+              <td>22</td>
+              <td>35</td>
+              <td>41</td>
+              <td>48</td>
+              <td>72</td>
+              <td>99</td>
+            </tr>
+            <tr>
+              <td>Lv. 40</td>
+              <td>30</td>
+              <td>34</td>
+              <td>41</td>
+              <td>48</td>
+              <td>72</td>
+              <td>Rv4</td>
+            </tr>
+            <tr>
+              <td>Lv. 45</td>
+              <td>25</td>
+              <td>33</td>
+              <td>49</td>
+              <td>60</td>
+              <td>82</td>
+              <td>Rv3</td>
+            </tr>
+            <tr>
+              <td>Lv. 50</td>
+              <td>20</td>
+              <td>43</td>
+              <td>50</td>
+              <td>66</td>
+              <td>87</td>
+              <td>---</td>
+            </tr>
+            <tr>
+              <td>Lv. 55</td>
+              <td>20</td>
+              <td>43</td>
+              <td>58</td>
+              <td>71</td>
+              <td>99</td>
+              <td>---</td>
+            </tr>
+            <tr>
+              <td>Lv. 60</td>
+              <td>33</td>
+              <td>50</td>
+              <td>60</td>
+              <td>77</td>
+              <td>Rv3</td>
+              <td>---</td>
+            </tr>
+            <tr>
+              <td>Lv. 65</td>
+              <td>28</td>
+              <td>53</td>
+              <td>67</td>
+              <td>87</td>
+              <td>---</td>
+              <td>---</td>
+            </tr>
+            <tr>
+              <td>Lv. 70</td>
+              <td>40</td>
+              <td>60</td>
+              <td>73</td>
+              <td>Rv1</td>
+              <td>---</td>
+              <td>---</td>
+            </tr>
+            <tr>
+              <td>Lv. 75</td>
+              <td>35</td>
+              <td>63</td>
+              <td>87</td>
+              <td>Rv2</td>
+              <td>---</td>
+              <td>---</td>
+            </tr>
+            <tr>
+              <td>Lv. 80</td>
+              <td>50</td>
+              <td>75</td>
+              <td>95</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+            </tr>
+            <tr>
+              <td>Lv. 85</td>
+              <td>45</td>
+              <td>85</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+            </tr>
+            <tr>
+              <td>Lv. 90</td>
+              <td>58</td>
+              <td>91</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+            </tr>
+            <tr>
+              <td>Lv. 95</td>
+              <td>71</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+            </tr>
+            <tr>
+              <td>Lv. 98</td>
+              <td>68</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+            </tr>
+          </table>
+          <p>As can be seen, while you often don't need to be very high to have a chance at a higher level grotto, you quickly need levels in order to find them reasonably often. And getting a Lv. 99 Grotto never has a decent chance, and requires a very high level for even the remotest possibility.</p>
+          <p>A lot of this analysis assumes that you're looking for these maps yourself, though. If you trade with friends, then you can potentially skip a lot of the hassle, or at least split some of the work.</p>
+        </dd>
+      </section>
+
+      <section id='1-4-glossary'>
+        <header>
+          <h2>1.4 Glossary</h2>
+          <p>The following terms will be used repeatedly throughout the guide, so it is important to be familiar with them.</p>
+        </header>
+        <section id='1-4-1-grotto-map-terms'>
+          <header>
+            <h3>1.4.1 Grotto Map Terms</h3>
+          </header>
+          <dl>
+            <dt>Rank:</dt>
+            <dd>
+              <p>This term is used to specify a number of different types of Rank, depending on context. The ones used in this guide are Grotto Rank, Monster Rank and Chest Rank. For more details, see their descriptions further on in the Glossary.</p>
+            </dd>
+            <dt>Quality:</dt>
+            <dd>
+              <p>All grottoes have a Quality, which is a number between 2 and 248 that helps determine how difficult the grotto will be. Starting Monster Rank, Grotto Depth and the Boss of the grotto are all restricted based on the Quality of the grotto, based on which Grotto Rank the Quality creates.</p>
+            </dd>
+            <dt>Grotto Rank:</dt>
+            <dd>
+              <p>Solely based on the Quality of the grotto, this is a number from 1 to 12 that dictates what ranges of Monster Rank, Grotto Depth and Boss may be generated within the grotto. For example, a Rank 1 Grotto can only have a Depth of 2-4, a starting Monster Rank of 1-3 and only the first of three Grotto Bosses. A rank 5 grotto, by comparison, can have a Depth of 6-10, a starting Monster Rank of 3-5 and Grotto Bosses #3 to #7.</p>
+            </dd>
+            <dt>Seed:</dt>
+            <dd><p>The Seed of a grotto is an identifying number that controls how that grotto is built. It is a "random seed" (see Wikipedia for more info) that causes the random generator for grottos to create the same map for that specific number. Maps with the same Seed and Grotto Rank will be the same unique grotto, right down to floor design, locations of chests, encounter chances and so forth.</p></dd>
+            <dt>Unique Grotto:</dt>
+            <dd>A grotto with a particular Seed and particular Grotto Rank is a unique grotto. All grottos found are unique grottos, and can be found in any game. However, sometimes we wish to specify a unique grotto because it has certain things about it that make it advantageous to find, like an abundance of chests or being easy to farm. In this case, being able to generate a unique grotto requires careful consideration of Base Quality and a lot of luck. More information about this will be covered in Section 3.1 "Unique Grottos".</dd>
+            <dt>Location:</dt>
+            <dd>
+              <p>Each grotto, regardless of how unique it is, can be found in one of up to 150 locations around the world of DQ9. Lower quality grottos are more limited in which locations they can be found in. There are three ranges of Quality that determine these locations, and each unique grotto Seed can be found in up to 3 different locations per Quality range.</p>
+            </dd>
+            <dt>Name:</dt>
+            <dd>
+              <p>The name of a grotto is formed of four parts: Prefix, Locale, Suffix and Level. It is the primary method that the player has of identifying a grotto. As an example, the first grotto you usually find is "Granite Tunnel of Woe Lv. 1".</p>
+              <p>The Prefix for this map is Granite, and this gives a clue of the starting Monster Rank of the grotto. The Locale of this map is "Tunnel", and this refers to both the Depth and Environ of the grotto. The Suffix is "Woe" and this is linked to which of the 12 Grotto Bosses can be found at the bottom. And finally, the Level of this map is 1, which is a combination of Depth, starting Monster Rank and Boss with a small +/-5 variation.</p>
+              <p>It is possible to use a grotto's Name and Location to help narrow down which particular unique grotto you have. However, sometimes even this is not enough to completely identify a grotto. Other things that can help identify a unique grotto are its Base and possible Final Qualities.</p>
+            </dd>
+            <dt>BQ (Base Quality):</dt>
+            <dd>
+              <p>The Quality of a generated grotto is controlled in two stages. The first stage is the Base Quality (BQ for short), which is the sum of your Main Character's highest vocation level, the Level of the grotto that you just completed, and 5 times the Main Character's highest Revocation. So a Main Character that has no higher than 1 in all of their vocations and no revocations, that complete a Lv. 1 grotto, would have a BQ of 2. Similarly, a Main Character that has at least one vocation at 99 and a vocation that they have Relocated 10 times, that complete a Lv. 99 grotto, would have a BQ of 248.</p>
+              <p>The BQ then has a -/+10% variance that creates the Final Quality (FQ for short) of the grotto. BQ is the part of the formula you can control, and is therefore important when we start looking at the chances of finding certain unique grottos. FQ is the actual Quality of the grotto that is created, and is important to the grotto generation code because it dictates what grotto you get.</p>
+            </dd>
+            <dt>FQ (Final Quality):</dt>
+            <dd>
+              <p>Final Quality is another name for the Quality of the grotto, and refers to the Quality that the grotto is created with. Due to the way grottos are generated, there are a limited number of combinations of BQ variance, Seed and Location. As such, to get a particular FQ for unique grotto will often require that you have a specific BQ. Some FQs for particular unique grottos are even impossible to get, due to the way grottos are generated. More information about this will be in section 3.1 "Unique Grottos".</p>
+            </dd>
+          </dl>
+        </section>
+        <section id='1-4-2-grotto-attributes'>
+          <header>
+            <h3>1.4.2 Grotto Attributes</h3>
+          </header>
+          <dl>
+            <dt>Environ:</dt>
+            <dd>
+              <p>There are 5 different types of Environs a grotto may have, which determines both how a grotto looks and what monsters will be found there. Caves and Ruins are the most common Environs, whilst Fire, Water and Ice are equally rare.</p>
+            </dd>
+            <dt>Depth:</dt>
+            <dd>
+              <p>The depth of a grotto is simply how many floors deep it is. This number does not include the Boss Floor, so a grotto with a Depth of 16 would have its Boss Floor on the 17th floor. Depth is one of the factors that determines a grotto's level.</p>
+            </dd>
+            <dt>Monster Rank:</dt>
+            <dd>
+              <p>There are 12 Monster Ranks, each forming a group of monsters found at that Rank. As the Monster Rank increases, the monsters chosen will be more difficult, and many of those found at the highest Monster Ranks can only be found in Grottos. Monsters also differ according to which Environ they're found in, so Rank 12 Monsters in Ruins will be different to Rank 12 Monster s in Ice grottoes.</p>
+              <p>Each Grotto has a starting Monster Rank which dictates what Monster Rank can be found in the first four floors. For every four floors you descend, the Monster Rank increases by 1, so a grotto that has a starting Monster Rank of 9 would have Rank 12 Monsters on floors 13F to 16F. Starting Monster Rank is one of the factors that determines a grotto's level.</p>
+            </dd>
+            <dt>Boss:</dt>
+            <dd>
+              <p>There are 12 possible Grotto Bosses, which lurk on the Boss Floor at the bottom of each grotto. With the exception of the 12th Grotto Boss, all bosses will have a 100% chance of dropping a random map to a new Grotto. They also each have two other items they can randomly drop, the rarest of which can usually be alchemised into some of the most powerful equipment in the game.</p>
+              <p>The Boss found within a particular grotto is one of the factors that determines the level of that grotto.</p>
+            </dd>
+            <dt>Level:</dt>
+            <dd>
+              <p>The Level of a grotto has two purposes: it's both a rough indicator of how dangerous/rewarding the grotto is, and it helps determine the Quality of the grotto map that the boss will drop when you complete it. A grotto with a Depth of 2, a starting Monster Rank of 1 and Boss #1 (Equinox) has a base Level of 0. Each additional Depth, Monster Rank or Boss # increases the base Level of the grotto by 3; this means that a grotto with a Depth of 16, a starting Monster Rank of 9 and Boss #12 will have a base Level of 99.</p>
+              <p>The actual Level of the grotto varies between -5 and +5 of this base Level, and can be no lower than 1 and no higher than 99. Like many other things, the Seed of the grotto dictates what variation in level will take place, so a particular grotto will always have the same level with the same variation.</p>
+            </dd>
+            <dt>Chest Rank:</dt>
+            <dd>
+              <p>One important reason for delving into grottos are the chests found within. with the exception of the boss floor and the first two floors of every grotto (which have no chests at all), every floor will have between 1 and 3 Blue Chests to be found. The Chest Rank of a chest determines which list of items will be used to randomly determine a specific chest's contents. Rank 1 Chests tend to have fairly weak items, whilst Rank 10 Chests can contain some of the best equipment in the game, if you're lucky.</p>
+              <p>The location and Rank of chests within a grotto is fixed and determined by the Seed of the grotto, so they will not change between visits. However, the item you get when you open the chest is randomly picked from the appropriate Chest Rank list, so it's possible to get different items from the same chest when you revisit a grotto.</p>
+              <p>Chest Rank is partially determined by the Monster Rank of the floor, so grottos with stronger monsters will have the chance of better items to be found.</p>
+            </dd>
+          </dl>
+        </section>
+      </section>
+
+    </section>
+
+    <section id='2-basic-grotto-generation'>
+      <header>
+        <h1>2. Basic Grotto Generation</h1>
+        <p>When a new grotto map is created, it is given a Quality, Seed and Location. From the Quality and Seed, all the details of the grotto, right down to map design and chest location, can be determined by the game.</p>
+        <p>The first part to concentrate on is the Quality of the grotto, since this determines both the possible Locations and the Grotto’s Rank.</p>
+      </header>
+      <section id='2-1-quality-and-grotto-rank'>
+        <header>
+          <h2>2.1 Quality and Grotto Rank</h2>
+        </header>
+        <section id='2-1-1-base-and-final-quality'>
+          <header>
+            <h3>2.1.1 Base and Final Quality</h3>
+          </header>
+          <p>The Final Quality (FQ) of a map is an approximate +/-10% of the calculated Base Quality (BQ), which is determined by your Main Character's highest vocation and revocation count, as well as the Level of the grotto you completed to get the new map.</p>
+          <p>The Base Quality of a map one from a Grotto Boss can be stated as follows:</p>
+          <code>BQ = Hero's Maximum Vocation Level + 5 * Hero's Maximum Revocation + Level of Completed Grotto</code>
+          <p>Your Maximum Vocation Level is the level of your highest vocation, no matter what your current vocation is. For instance, if your Main Character was a Lv. 15 Minstrel, but had Lv. 99 in Priest as well, then your Maximum Vocation Level would be 99. Furthermore, for random maps from Grotto Bosses, this is calculated <em>after</em> you defeat the boss, so if you gain a level during the battle and this increases your Maximum Vocation Level, then the formula will use your new level, not the level you started the battle with.</p>
+          <p>Your Maximum Revocation is the number of times you've used the Revocation option at Alltrades Abbey on a single vocation. Revocation is when you take a Lv. 99 character and reset them to Lv. 1, whilst keeping whatever skills they've learned but having to level up from the beginning again. The Revocation count caps at 10, so further revocations will not increase the Base Quality of your maps. Also, only the highest Revocation Count of all your vocations count. relocating your Minstrel vocation 3 times and your Warrior vocation 5 times would give you a Maximum Revocation of 5, resulting in a 25 point increase in Base Quality.</p>
+          <p>There are a couple of occasions where a random map will be given to yo without having completed a grotto. In these cases, the Base Quality is calculated as if you had completed a Grotto that is <em>half</em> your Maximum Vocation Level, rounded down. So if you had a Maximum Vocation Level of 99, the BQ would be calculated as if you had just completed a Level 49 grotto.</p>
+          <p>The reward for Quest #015 'Collapsus's Call' is not random though, and will always be the unique grotto "Granite Tunnel of Woe Lv. 1", found west of Stornway (Location #5). This set reward is intended to be your first grotto. Note that this is not a unique name: there are 21 other maps called "Granite Tunnel of Woe Lv. 1", one of which may even be found in the exact same location just west of Stornway. Further, the location given for Collapsus's map is not one that it could ever have gotten if the map had been randomly generated.</p>
+          <p>Once BQ has been calculated, the Final Quality of the grotto is calculated as such:</p>
+          <code>
+            FQ = BQ + Rnd(-[BQ/10]..+[BQ/10])<br>
+            If FQ &gt; BQ and BQ is not divisible by 10:<br>
+            &nbsp;&nbsp;FQ = FQ - 1
+          </code>
+          <p>As an example, let's say you have a BQ of 152 (which could be a Lv. 82 character with no revocations completing an Lv. 70 grotto). [BQ / 10] would be equal to [152 / 10] = [15.2]. The square brackets indicate that we truncate or round down this result to 15.</p>
+          <p>So, we have FQ = 152 + Rnd(-15..+15), which means that we have add a random number from -15 to +15 inclusive to the Base Quality of 152. This gives us a result of 137 to 167.</p>
+          <p>Finally, if the Final Quality happens to be greater than 152, then we subtract 1 from the result, because the Base Quality of 152 is not divisible by 10. There's no special reason for this adjustment, only that it's a quirk of the way it calculates the random deviation. That gives us a range of 137 to 166 for the Final Quality of this grotto.</p>
+        </section>
+        <section id='2-1-2-grotto-rank'>
+          <header>
+            <h3>2.1.2 Grotto Rank</h3>
+          </header>
+          <p>Once the Final Quality of the grotto has been determined, we can calculate the Rank of the grotto. These ranks determine the Depth, starting Monster Rank and Boss of the grotto.</p>
+          <p>Each of these three attributes have their own ranges of Quality within which they change, but we can combine all three into a single list of 12 Grotto Ranks. As we climb the Grotto Ranks, sometimes the range of Bosses will change, and sometimes the possible Depth and/or Monster Rank ranges will change, but it will generally result in stronger and higher Level grottos.</p>
+          <p>The table of Grotto Ranks, Quality Ranges and associated attributes are as follows:</p>
+          <table>
+            <tr>
+              <th></th>
+              <th>Quality</th>
+              <th>Depth</th>
+              <th>Starting Monster Rank</th>
+              <th>Boss ID</th>
+            </tr>
+            <tr>
+              <td>Rank 1</td>
+              <td>2-55</td>
+              <td>2-4</td>
+              <td>1-3</td>
+              <td>1-3</td>
+            </tr>
+            <tr>
+              <td>Rank 2</td>
+              <td>56-60</td>
+              <td>4-6</td>
+              <td>2-4</td>
+              <td>1-3</td>
+            </tr>
+            <tr>
+              <td>Rank 3</td>
+              <td>61-75</td>
+              <td>4-6</td>
+              <td>2-4</td>
+              <td>2-5</td>
+            </tr>
+            <tr>
+              <td>Rank 4</td>
+              <td>76-80</td>
+              <td>6-10</td>
+              <td>3-5</td>
+              <td>2-5</td>
+            </tr>
+            <tr>
+              <td>Rank 5</td>
+              <td>81-100</td>
+              <td>6-10</td>
+              <td>3-5</td>
+              <td>3-7</td>
+            </tr>
+            <tr>
+              <td>Rank 6</td>
+              <td>101-120</td>
+              <td>8-12</td>
+              <td>4-6</td>
+              <td>4-7</td>
+            </tr>
+            <tr>
+              <td>Rank 7</td>
+              <td>121-140</td>
+              <td>10-14</td>
+              <td>4-6</td>
+              <td>5-9</td>
+            </tr>
+            <tr>
+              <td>Rank 8</td>
+              <td>141-160</td>
+              <td>10-16</td>
+              <td>5-7</td>
+              <td>6-9</td>
+            </tr>
+            <tr>
+              <td>Rank 9</td>
+              <td>161-180</td>
+              <td>10-16</td>
+              <td>5-7</td>
+              <td>7-10</td>
+            </tr>
+            <tr>
+              <td>Rank 10</td>
+              <td>181-200</td>
+              <td>11-16</td>
+              <td>6-9</td>
+              <td>8-12</td>
+            </tr>
+            <tr>
+              <td>Rank 11</td>
+              <td>201-220</td>
+              <td>12-16</td>
+              <td>8-9</td>
+              <td>1-12</td>
+            </tr>
+            <tr>
+              <td>Rank 12</td>
+              <td>221-248</td>
+              <td>14-16</td>
+              <td>9</td>
+              <td>1-12</td>
+            </tr>
+          </table>
+          <p>From this, we can see a Rank 1 grotto can have a Depth of 2-4, a Monster Rank of 1-3 on its first floor, and any of the first 3 bosses. The highest Rank of grotto can, by comparison, have a Depth of 14-16, a Monster Rank of 9 on its first floor, and any of the 12 possible bosses.</p>
+          <p>Do remember that the Monster Rank increases for every four floors you descend in any grotto. A grotto that has a starting Monster Rank of 9 would have Rank 10 Monsters on 5F to 8F, Rank 11 Monsters on 9F to 12F and Rank 12 Monsters on 13F to 16F. This is, in fact, the only possible way to encounter Rank 12 Monsters in a grotto.</p>
+          <p>For Depth and starting Monster Rank, the chance of each value in the range is equal. So Rank 1 grottoes would have a 1 in 3 chance each of having 2, 3 or 4 floors, and a 1 in 3 chance each of having Monster Rank 1, 2 or 3 on its first four floors.</p>
+          <p>Bosses, however, are weighted in such a way that the easier bosses are more likely to be encountered. The chances of each boss depend on the exact range and are as follows:</p>
+          <table>
+            <tr>
+              <th></th>
+              <th>Rank 1-2</th>
+              <th>Rank 3-4</th>
+              <th>Rank 5</th>
+              <th>Rank 6</th>
+              <th>Rank 7</th>
+              <th>Rank 8</th>
+              <th>Rank 9</th>
+              <th>Rank 10</th>
+              <th>Rank 11-12</th>
+            </tr>
+            <tr>
+              <td>Equinox (#1)</td>
+              <td>4/11 (36%)</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>20/112 (18%)</td>
+            </tr>
+            <tr>
+              <td>Nemean (#2)</td>
+              <td>4/11 (36%)</td>
+              <td>4/12 (33%)</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>20/112 (18%)</td>
+            </tr>
+            <tr>
+              <td>Shogum (#3)</td>
+              <td>3/11 (27%)</td>
+              <td>3/12 (25%)</td>
+              <td>15/56 (27%)</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>15/112 (13%)</td>
+            </tr>
+            <tr>
+              <td>Traumintor (#4)</td>
+              <td>---</td>
+              <td>3/12 (25%)</td>
+              <td>15/56 (27%)</td>
+              <td>15/41 (37%)</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>15/112 (13%)</td>
+            </tr>
+            <tr>
+              <td>Elusid (#5)</td>
+              <td>---</td>
+              <td>2/12 (17%)</td>
+              <td>10/56 (18%)</td>
+              <td>10/41 (24%)</td>
+              <td>5/17 (29%)</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>10/112 (9%)</td>
+            </tr>
+            <tr>
+              <td>Sir Sanguinus (#6)</td>
+              <td>---</td>
+              <td>---</td>
+              <td>10/56 (18%)</td>
+              <td>10/41 (24%)</td>
+              <td>5/17 (29%)</td>
+              <td>5/12 (42%)</td>
+              <td>---</td>
+              <td>---</td>
+              <td>10/112 (9%)</td>
+            </tr>
+            <tr>
+              <td>Atlas (#7)</td>
+              <td>---</td>
+              <td>---</td>
+              <td>6/56 (11%)</td>
+              <td>6/41 (15%)</td>
+              <td>3/17 (18%)</td>
+              <td>3/12 (25%)</td>
+              <td>3/9 (33%)</td>
+              <td>---</td>
+              <td>6/112 (9%)</td>
+            </tr>
+            <tr>
+              <td>Hammibal (#8)</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>2/17 (12%)</td>
+              <td>2/12 (17%)</td>
+              <td>2/9 (22%)</td>
+              <td>2/8 (25%)</td>
+              <td>4/112 (4%)</td>
+            </tr>
+            <tr>
+              <td>Fowleye (#9)</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>2/17 (12%)</td>
+              <td>2/12 (17%)</td>
+              <td>2/9 (22%)</td>
+              <td>2/8 (25%)</td>
+              <td>4/112 (4%)</td>
+            </tr>
+            <tr>
+              <td>Excalipurr (#10)</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>2/9 (22%)</td>
+              <td>2/8 (25%)</td>
+              <td>4/112 (4%)</td>
+            </tr>
+            <tr>
+              <td>T Wrecks (#11)</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>1/8 (13%)</td>
+              <td>2/112 (2%)</td>
+            </tr>
+            <tr>
+              <td>Greygnarl (#12)</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>---</td>
+              <td>1/8 (13%)</td>
+              <td>2/112 (2%)</td>
+            </tr>
+          </table>
+          <p>In short, Rank 1 to 10 grottoes have their own distinct range of bosses, with a slightly lesser chance of meeting the stronger bosses in each range (less than 10% though). But Rank 11 and 12 grottoes allow the entire range of bosses, but have a very small chance of generating the toughest bosses. Depending on which goals you're working towards, you may sometimes find it worthwhile to search lower ranked grottoes for certain bosses, rather than rely on the final two ranks to complete your collection.</p>
+        </section>
+      </section>
+      <section id='2-2-grotto-details'>
+        <header>
+          <h2>2.2 Grotto Details</h2>
+        </header>
+        <section id='2-2-1-location'>
+          <header>
+            <h3>2.2.1 Location</h3>
+          </header>
+          <p>By now, we have the Quality and Grotto Rank of the grotto. After this, the Seed is generated. The Seed will use the details of the Grotto Rank to help generate the exact grotto, including its environ, name and level.</p>
+          <div class='no-page-break'>
+            <p>Finally, the grotto will be given a location. There are 150 possible locations, and the location chosen depends on the quality.</p>
+            <ul>
+              <li>For Qualities 2-50, the location chosen will be from #1 to #47.</li>
+              <li>For Qualities 51-80, the location chosen will be from #1 to #131.</li>
+              <li>For Qualities 80+, the location chosen will be from #1 to #150.</li>
+            </ul>
+            <p>The location is chosen without any weighting from within each range.</p>
+          </div>
+          <p>Due to the way FQ, Seed and Location are generated, each Seed has between one to three locations it can appear at, and those locations can vary between the three Quality ranges (2-50, 51-80, 80-248). This means that a unique Rank 1 grotto (quality 2-55) can have up to 6 locations it could possibly appear at, depending on Quality. We call this a "valid combination", and we will use it later to help identify unique grottos.</p>
+          <p>Locations #1 to #47 comprise of all the places visited in the story up to Bloomingdale, before you get access to the ship. The exception is #47, which is the lighthouse near Bloomingdale.</p>
+          <p>Locations #48 to #131 are scattered throughout the world, many of which require ship travel to get to, and you will have access to all of these locations by the time you reach Upover.</p>
+          <p>The final series of locations (#132 to #150) comprise almost entirely of places that can only be reached by air, with the exception of #132 and #133 which are found in the Gittish Empire.</p>
+          <p>The full list of locations by area are as follows:</p>
+          <table>
+            <tr>
+              <td>#1-#4</td>
+              <td></td>
+              <td>Angel Falls</td>
+            </tr>
+            <tr>
+              <td>#5-#8</td>
+              <td></td>
+              <td>Western Stornway</td>
+            </tr>
+            <tr>
+              <td>#9-#11</td>
+              <td></td>
+              <td>Eastern Stornway</td>
+            </tr>
+            <tr>
+              <td>#12-#16</td>
+              <td></td>
+              <td>Zere</td>
+            </tr>
+            <tr>
+              <td>#17-#19</td>
+              <td></td>
+              <td>Doomingale Forest</td>
+            </tr>
+            <tr>
+              <td>#20-#24</td>
+              <td></td>
+              <td>Eastern Coffinwell</td>
+            </tr>
+            <tr>
+              <td>#25-#28</td>
+              <td></td>
+              <td>Western Coffinwell</td>
+            </tr>
+            <tr>
+              <td>#29-#33</td>
+              <td></td>
+              <td>Newid Isle</td>
+            </tr>
+            <tr>
+              <td>#34-#36</td>
+              <td></td>
+              <td>Slurry Coast</td>
+            </tr>
+            <tr>
+              <td>#37-#39</td>
+              <td></td>
+              <td>Dourbridge</td>
+            </tr>
+            <tr>
+              <td>#40-#42</td>
+              <td></td>
+              <td>Lonely Plains</td>
+            </tr>
+            <tr>
+              <td>#43-$36</td>
+              <td></td>
+              <td>Bloomingdale</td>
+            </tr>
+            <tr>
+              <td>#47</td>
+              <td>[Sea]</td>
+              <td>Bloomingdale</td>
+            </tr>
+            <tr>
+              <td>#48-#50</td>
+              <td>[Sea]</td>
+              <td>Lonely Coast</td>
+            </tr>
+            <tr>
+              <td>#51</td>
+              <td>[Sea]</td>
+              <td>Pluvi Isle</td>
+            </tr>
+            <tr>
+              <td>#52-#53</td>
+              <td>[Sea]</td>
+              <td>Djust Desert</td>
+            </tr>
+            <tr>
+              <td>#54-#58</td>
+              <td></td>
+              <td>Djust Desert</td>
+            </tr>
+            <tr>
+              <td>#59</td>
+              <td></td>
+              <td>Hermany</td>
+            </tr>
+            <tr>
+              <td colspan='3'><i>Continues below...</i></td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td colspan='3'><i>Continues from above...</i></td>
+            </tr>
+            <tr>
+              <td>#60</td>
+              <td>[Sea]</td>
+              <td>Hermany</td>
+            </tr>
+            <tr>
+              <td>#61-#62</td>
+              <td></td>
+              <td>Hermany</td>
+            </tr>
+            <tr>
+              <td>#63-#67</td>
+              <td></td>
+              <td>Snowberian Coast</td>
+            </tr>
+            <tr>
+              <td>#68-#72</td>
+              <td></td>
+              <td>Snowberia</td>
+            </tr>
+            <tr>
+              <td>#73-#75</td>
+              <td></td>
+              <td>Cringle Coast</td>
+            </tr>
+            <tr>
+              <td>#76-#82</td>
+              <td></td>
+              <td>Urdus Marshland</td>
+            </tr>
+            <tr>
+              <td>#83-#87</td>
+              <td></td>
+              <td>Iluugazar Plains</td>
+            </tr>
+            <tr>
+              <td>#88-#91</td>
+              <td></td>
+              <td>Mt Ulzuun</td>
+            </tr>
+            <tr>
+              <td>#92-#94</td>
+              <td></td>
+              <td>Mt Ulbaruun</td>
+            </tr>
+            <tr>
+              <td>#95-#97</td>
+              <td></td>
+              <td>Mt Ulzuun</td>
+            </tr>
+            <tr>
+              <td>#98-#100</td>
+              <td>[Sea]</td>
+              <td>Khaalag Coast</td>
+            </tr>
+            <tr>
+              <td>#101-#103</td>
+              <td>[Sea]</td>
+              <td>Ondor Cliffs</td>
+            </tr>
+            <tr>
+              <td>#104</td>
+              <td>[Sea]</td>
+              <td>Western Coffinwell</td>
+            </tr>
+            <tr>
+              <td>#105-#108</td>
+              <td></td>
+              <td>Eastern Wormwood</td>
+            </tr>
+            <tr>
+              <td>#109-#112</td>
+              <td></td>
+              <td>Western Wormwood</td>
+            </tr>
+            <tr>
+              <td>#113</td>
+              <td>[Sea]</td>
+              <td>Western Wormwood</td>
+            </tr>
+            <tr>
+              <td>#114-#115</td>
+              <td></td>
+              <td>Wormwood Canyon</td>
+            </tr>
+            <tr>
+              <td>#116-#119</td>
+              <td></td>
+              <td>Wyrmtail</td>
+            </tr>
+            <tr>
+              <td>#120-#122</td>
+              <td></td>
+              <td>Wyrmwing</td>
+            </tr>
+            <tr>
+              <td>#123-#124</td>
+              <td></td>
+              <td>Wyrmtail</td>
+            </tr>
+            <tr>
+              <td>#125-#128</td>
+              <td></td>
+              <td>Wyrmsmaw</td>
+            </tr>
+            <tr>
+              <td>#129-#130</td>
+              <td></td>
+              <td>Wyrmneck</td>
+            </tr>
+            <tr>
+              <td>#131</td>
+              <td>[Sea]</td>
+              <td>Wyrmneck</td>
+            </tr>
+            <tr>
+              <td>#132-#133</td>
+              <td></td>
+              <td>The Gittish Empire</td>
+            </tr>
+            <tr>
+              <td>#134</td>
+              <td>[Air]</td>
+              <td>Angel Falls</td>
+            </tr>
+            <tr>
+              <td>#135-#136</td>
+              <td>[Air]</td>
+              <td>Eastern Stornway</td>
+            </tr>
+            <tr>
+              <td>#137-#138</td>
+              <td>[Air]</td>
+              <td>Western Coffinwell</td>
+            </tr>
+            <tr>
+              <td>#139-#140</td>
+              <td>[Air]</td>
+              <td>Newid Isle</td>
+            </tr>
+            <tr>
+              <td>#141-#143</td>
+              <td>[Air]</td>
+              <td>Lonely Coast</td>
+            </tr>
+            <tr>
+              <td>#144</td>
+              <td>[Air]</td>
+              <td>Djust Desert</td>
+            </tr>
+            <tr>
+              <td>#145</td>
+              <td>[Air]</td>
+              <td>Hermany</td>
+            </tr>
+            <tr>
+              <td>#146</td>
+              <td>[Air]</td>
+              <td>Cringle Coast</td>
+            </tr>
+            <tr>
+              <td>#147</td>
+              <td>[Air]</td>
+              <td>Ondor Cliffs</td>
+            </tr>
+            <tr>
+              <td>#148</td>
+              <td>[Air]</td>
+              <td>Eastern Wormwood</td>
+            </tr>
+            <tr>
+              <td>#149</td>
+              <td>[Air]</td>
+              <td>Western Wormwood</td>
+            </tr>
+            <tr>
+              <td>#150</td>
+              <td>[Air]</td>
+              <td>Wyrmtail</td>
+            </tr>
+          </table>
+          <p>[Sea] means you require either sea or air travel to get to this location even with all Zoom targets available. [Air] means you require air travel to get to this location.</p>
+          <p>In summary, Rank 1 grottos can almost always be found before Bloomingdale, and Rank 5+ grottos have an ~11% chance that they'll require air travel.</p>
+        </section>
+
+        <section id='2-2-2-environ-name-and-level'>
+          <header>
+            <h3>2.2.2 Environ, Name and Level</h3>
+          </header>
+          <p>As we've seen, the Grotto Rank helps determine the ranges of Depth, starting Monster Rank and Boss of a grotto. The Seed then determines the exact Depth, starting Monster Rank and Boss of the grotto from those ranges, as well as the grotto's Environ, Name, Level and other attributes.</p>
+          <p>As an example, a Seed of 0 for a Rank 1 Grotto would generate a Depth of 4 (from 2-4), a starting Monster Rank of 1 (from 1-3) and Equinox (#1 from #1-3). It would also generate the maps Environ (Ruins in this case), Level (3 in this case) and Name: “Graphite Mine of Doubt Lv. 3”.</p>
+          <p>We've already seen how the primary stats of Depth, Monster Rank and Boss are determined. Let's look at the other three.</p>
+          <p>Environ is a simple percentage chance of one of five possibilities. They are as follows:</p>
+          <table>
+            <tr>
+              <td>30% chance:</td>
+              <td>Caves</td>
+              <td>(Natural brown cave walls)</td>
+            </tr>
+            <tr>
+              <td>40% chance:</td>
+              <td>Ruins</td>
+              <td>(Brick corridors and straight angles)</td>
+            </tr>
+            <tr>
+              <td>10% chance:</td>
+              <td>Fire</td>
+              <td>(Red rock floor and magma chasm instead of walls)</td>
+            </tr>
+            <tr>
+              <td>10% chance:</td>
+              <td>Water</td>
+              <td>(Rock walls with ankle-deep water</td>
+            </tr>
+            <tr>
+              <td>10% chance:</td>
+              <td>Ice</td>
+              <td>(Ice floor and walls)</td>
+            </tr>
+          </table>
+          <p>As such, the vast majority of grottos will be either Caves or Ruins. Only 30% will have either Fire, Water or Ice Environs. This can sometimes be frustrating, since there are many monsters in the different environs that people will wish to find earlier rather than later.</p>
+          <p>Next, the Level is generated. As alluded to earlier, the Level of a grotto indicates roughly how dangerous it can  be. First, we generate a Base Level by way of the following formula:</p>
+          <code>Base Level = 3 * (Depth + Starting Monster Rank + Boss - 4)</code>
+          <p>So a Depth of 2, a starting Monster Rank of 1 and Equinox (Boss #1) would create a Base Level of 3 * (2 + 1 + 1 - 4) = 3 * 0 = 0.</p>
+          <p>A Depth of 16, a starting Monster Rank of 9 and Greygnarl (Boss #12) would create a Base Level of 3 * (16 + 9 + 12 - 4) = 3 * 33 = 99.</p>
+          <p>The weakest grotto thus starts with a Base Level of 0, and we increase the Level by 3 for every increase of Depth, starting Monster Rank and Boss.</p>
+          <p>Then, to get a true level of the grotto, we add a random value from -5 to +5:</p>
+          <code>Base Level = 3 * (Depth + Starting Monster Rank + Boss - 4)</code>
+          <p>This value is capped at 1 minimum and 99 maximum.</p>
+          <p>Since Level is calculated solely from Depth, starting Monster Rank and the chosen Boss, we can use this to calculate minimum, maximum and average Levels for each of the Grotto Ranks. These are as follows:</p>
+          <table>
+            <tr>
+              <th>Grotto Rank</th>
+              <th>Quality</th>
+              <th>Level Range</th>
+              <th>Average</th>
+            </tr>
+            <tr>
+              <td>Rank 1</td>
+              <td>2-55</td>
+              <td>1-23</td>
+              <td>8.868</td>
+            </tr>
+            <tr>
+              <td>Rank 2</td>
+              <td>56-60</td>
+              <td>4-32</td>
+              <td>17.724</td>
+            </tr>
+            <tr>
+              <td>Rank 3</td>
+              <td>61-75</td>
+              <td>7-38</td>
+              <td>21.742</td>
+            </tr>
+            <tr>
+              <td>Rank 4</td>
+              <td>76-80</td>
+              <td>16-53</td>
+              <td>33.743</td>
+            </tr>
+            <tr>
+              <td>Rank 5</td>
+              <td>81-100</td>
+              <td>19-59</td>
+              <td>37.769</td>
+            </tr>
+            <tr>
+              <td>Rank 6</td>
+              <td>101-120</td>
+              <td>31-68</td>
+              <td>48.509</td>
+            </tr>
+            <tr>
+              <td>Rank 7</td>
+              <td>121-140</td>
+              <td>40-80</td>
+              <td>58.407</td>
+            </tr>
+            <tr>
+              <td>Rank 8</td>
+              <td>141-160</td>
+              <td>46-89</td>
+              <td>66.251</td>
+            </tr>
+            <tr>
+              <td>Rank 9</td>
+              <td>161-180</td>
+              <td>49-92</td>
+              <td>69.999</td>
+            </tr>
+            <tr>
+              <td>Rank 10</td>
+              <td>181-200</td>
+              <td>58-99</td>
+              <td>79.858</td>
+            </tr>
+            <tr>
+              <td>Rank 11</td>
+              <td>201-220</td>
+              <td>46-99</td>
+              <td>68.060</td>
+            </tr>
+            <tr>
+              <td>Rank 12</td>
+              <td>221-248</td>
+              <td>55-99</td>
+              <td>72.551</td>
+            </tr>
+          </table>
+          <p>As such, we can see that it can be rather difficult to find higher level maps, and a fair amount of luck is required, even at higher levels and Grotto Ranks. Some of the analysis on how higher levels affect the levels of grottoes you find can be found in the FAQ (Section 1.3).</p>
+          <p>Last, the Grotto needs a Name. The Name has four parts to it: Prefix, Locale, Suffix and Level. We've already calculated the Level, so all we need is the Prefix, Locale and Suffix. Let's take a look at this in order:</p>
+          <p>There are 16 possible Prefixes, and these are determined by the starting Monster Rank of the grotto. They are chosen as follows:</p>
+          <table>
+            <tr>
+              <th>Starting Monster Rank</th>
+              <th>Prefix</th>
+            </tr>
+            <tr>
+              <td>Monster Rank 1-2:</td>
+              <td>Clay, Rock, Granite, Basalt or Graphite</td>
+            </tr>
+            <tr>
+              <td>Monster Rank 3-4:</td>
+              <td>Basalt, Graphite, Iron, Copper or Bronze</td>
+            </tr>
+            <tr>
+              <td>Monster Rank 5-6:</td>
+              <td>Copper, Bronze, Steel, Silver, Gold or Platinum</td>
+            </tr>
+            <tr>
+              <td>Monster Rank 7-8:</td>
+              <td>Copper, Bronze, Steel, Silver, Gold, Platinum, Ruby, Emerald, Sapphire, or Diamond</td>
+            </tr>
+            <tr>
+              <td>Monster Rank 9:</td>
+              <td>Platinum, Ruby, Emerald, Sapphire or Diamond</td>
+            </tr>
+          </table>
+          <p>Again, the Prefix is chosen completely at random from the possibilities. The more valuable the mineral, the higher the Monster Rank it can indicate.</p>
+          <p>There are also 16 possible suffixes, and these are based onto boss of the grotto. The range of suffixes allocated to each boss are as follows:</p>
+          <table>
+            <tr>
+              <th>Boss ID</th>
+              <th>Suffix</th>
+            </tr>
+            <tr>
+              <td>#1-#3:</td>
+              <td>Joy, Bliss, Glee, Doubt, Woe or Dolour</td>
+            </tr>
+            <tr>
+              <td>#4-6:</td>
+              <td>Doubt, Woe, Dolour, Regret, Bane or Fear</td>
+            </tr>
+            <tr>
+              <td>#7-#9:</td>
+              <td>Regret, Bane, Fear, Dread, Hurt or Gloom</td>
+            </tr>
+            <tr>
+              <td>#10-#12:</td>
+              <td>Dread, Hurt, Gloom, Doom, Evil, Ruin or Death</td>
+            </tr>
+          </table>
+          <p>So the more dangerous the Suffix sounds, the stronger the boss at the bottom may be. As with the Prefix, there's quite a bit of variation possible though: Dolour, for example, could indicate any of the first six bosses.</p>
+          <p>Finally, the Locale of the grotto is based on two things: the Depth and Environ of the map. The Depth picks the "rank" of Locale chosen from within a range, and then the Environ picks from the chosen "rank" is used. These are as follows:</p>
+          <table>
+            <tr>
+              <th>Floors</th>
+              <th>Locale Rank</th>
+            </tr>
+            <tr>
+              <td>2-3</td>
+              <td>1-2</td>
+            </tr>
+            <tr>
+              <td>4-5</td>
+              <td>1-3</td>
+            </tr>
+            <tr>
+              <td>6-7</td>
+              <td>1-4</td>
+            </tr>
+            <tr>
+              <td>8-9</td>
+              <td>2-5</td>
+            </tr>
+            <tr>
+              <td>10-11</td>
+              <td>2-6</td>
+            </tr>
+            <tr>
+              <td>12-13</td>
+              <td>3-7</td>
+            </tr>
+            <tr>
+              <td>14-15</td>
+              <td>4-8</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>6-8</td>
+            </tr>
+          </table>
+          <br>
+          <table>
+            <tr>
+              <th>Locale Rank</th>
+              <th>Environs</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Tunnel [Ruins], Cave [Caves/Fire/Water/Ice]</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Marsh [Water], Crevasse [Ice], Mine [Caves/Ruins/Fire]</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Crater [Fire], Lake [Water], Icepit [Ice], Lair [Caves/Ruins]</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Dungeon [Fire], Moor [Water], Snowhall [Ice], Path [Caves/Ruins]</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Crypt [Caves/Ruins/Fire/Water/Ice]</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Ruins [Ruins], Waterway [Water], Tundra [Ice], Nest [Caves/Fire]</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>World [Caves/Ruins/Fire/Water/Ice]</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Abyss [Caves], Maze [Ruins], Void [Fire], Chasm [Water], Glacier [Ice]</td>
+            </tr>
+          </table>
+          <p>If we go back to our example grotto now, which was a Rank 1 grotto with a Seed of 0, we'll remember that it had a Depth of 4, a starting Monster Rank of 1, a Boss of Equinox and its Environ was Ruins.</p>
+          <p>From this, the game calculated a base level of 3 * (4 + 1 + 1 - 4) = 3 * 2 = 6. The random -5 to +5 for this Seed was -3, so 6 - 3 gave it a final level of 3.</p>
+          <p>The starting Monster Rank of 1 gave it the following possibilities of Prefix: Clay, Rock, Granite, Basalt, Graphite. The Seed chose Graphite out of those possibilities.</p>
+          <p>Equinox is Boss #1, and gave the map the following possible Suffixes: Joy, Bliss, Glee, Doubt, Woe, Dolour. The Seed chose Doubt.</p>
+          <p>Finally, the Depth of 4 allowed a Locale Rank of between 1 and 3. The Seed chose Locale Rank 2. The Environ of Ruins grants the Locale of "Mine" for that rank.</p>
+          <p>So we finally have our full name for the grotto: "Graphite Mine of Doubt Lv. 3".</p>
+        </section>
+
+        <section id='2-2-3-understanding-a-name'>
+          <header>
+            <h3>2.2.3 Understanding a Name</h3>
+          </header>
+          <p>We've almost finished with the basic aspects of a grotto, and we've seen how its most important statistics and name is generated. That's from the game's point of view, though. As a player, we'll be looking at “Graphite Mine of Doubt Lv. 3”, and we'll be wondering what that means.</p>
+          <p>In order to help use identify this grotto, there's a few things that are useful to know. First, we should remember what we know about the Quality of the grotto, and their associated Grotto Ranks:</p>
+          <table>
+            <tr>
+              <th></th>
+              <th>Quality</th>
+              <th>Depth</th>
+              <th>Starting Monster Rank</th>
+              <th>Boss ID</th>
+              <th>Level Range</th>
+            </tr>
+            <tr>
+              <td>Rank 1</td>
+              <td>2-55</td>
+              <td>2-4</td>
+              <td>1-3</td>
+              <td>1-3</td>
+              <td>1-23</td>
+            </tr>
+            <tr>
+              <td>Rank 2</td>
+              <td>56-60</td>
+              <td>4-6</td>
+              <td>2-4</td>
+              <td>1-3</td>
+              <td>4-32</td>
+            </tr>
+            <tr>
+              <td>Rank 3</td>
+              <td>61-75</td>
+              <td>4-6</td>
+              <td>2-4</td>
+              <td>2-5</td>
+              <td>7-38</td>
+            </tr>
+            <tr>
+              <td>Rank 4</td>
+              <td>76-80</td>
+              <td>6-10</td>
+              <td>3-5</td>
+              <td>2-5</td>
+              <td>16-53</td>
+            </tr>
+            <tr>
+              <td>Rank 5</td>
+              <td>81-100</td>
+              <td>6-10</td>
+              <td>3-5</td>
+              <td>3-7</td>
+              <td>19-59</td>
+            </tr>
+            <tr>
+              <td>Rank 6</td>
+              <td>101-120</td>
+              <td>8-12</td>
+              <td>4-6</td>
+              <td>4-7</td>
+              <td>31-68</td>
+            </tr>
+            <tr>
+              <td>Rank 7</td>
+              <td>121-140</td>
+              <td>10-14</td>
+              <td>4-6</td>
+              <td>5-9</td>
+              <td>40-80</td>
+            </tr>
+            <tr>
+              <td>Rank 8</td>
+              <td>141-160</td>
+              <td>10-16</td>
+              <td>5-7</td>
+              <td>6-9</td>
+              <td>46-89</td>
+            </tr>
+            <tr>
+              <td>Rank 9</td>
+              <td>161-180</td>
+              <td>10-16</td>
+              <td>5-7</td>
+              <td>7-10</td>
+              <td>49-92</td>
+            </tr>
+            <tr>
+              <td>Rank 10</td>
+              <td>181-200</td>
+              <td>11-16</td>
+              <td>6-9</td>
+              <td>8-12</td>
+              <td>58-99</td>
+            </tr>
+            <tr>
+              <td>Rank 11</td>
+              <td>201-220</td>
+              <td>12-16</td>
+              <td>8-9</td>
+              <td>1-12</td>
+              <td>46-99</td>
+            </tr>
+            <tr>
+              <td>Rank 12</td>
+              <td>221-248</td>
+              <td>14-16</td>
+              <td>9</td>
+              <td>1-12</td>
+              <td>55-99</td>
+            </tr>
+          </table>
+          <p>There's several ways we can work out the Grotto Rank of this map. First, if we found the map ourselves, then we'd know the possible Final Qualities the map could have. For example, let's say we had a Main Character whose highest Vocation Level was 40 with no Revocations, and we'd just completed a Level 16 Grotto. The Base Quality would be 56, and that gives us a Final Quality of between 51 and 60. So we'd already know without even looking at the name that the map we get will be either Grotto Rank 1 or 2.</p>
+          <p>If we got the map from someone else, then we wouldn't be able to determine the Quality that way. Instead, let's look at the Level. The only Grotto Rank capable of producing a Lv. 3 map is Grotto Rank 1. From just the level, we were able to narrow down the Grotto Ranks to one possibility.</p>
+          <p>Higher levels would give us more possibilities, but the idea is the same: what we want from all this is the possible ranges of Depth, starting Monster Rank and Boss. For a Lv. 3 map, this is 2-4 for Depth, 1-3 for Monster Rank and #1-#3 for Boss. If it had been Lv. 4, we would have used the full ranges of both Grotto Ranks 1 and 2, which are 2-6 for Depth, 1-4 for Monster Rank and #1-#3 for Boss.</p>
+          <p>Now let’s look at the name itself. The Prefix tells us the possible starting monster ranks, and the Suffix tells us the possible bosses. The full list would be:</p>
+          <figure><pre><code>
+                       Prefix => MRank                   Suffix => Boss
+                 Clay:   12                         Joy:   123
+                 Rock:   12                       Bliss:   123
+              Granite:   12                        Glee:   123
+               Basalt:   1234                     Doubt:   123456
+             Graphite:   1234                       Woe:   123456
+                 Iron:     34                    Dolour:   123456
+               Copper:     345678                Regret:      456789
+               Bronze:     345678                  Bane:      456789
+                Steel:       5678                  Fear:      456789
+               Silver:       5678                 Dread:         789ABC
+                 Gold:       5678                  Hurt:         789ABC
+             Platinum:       56789                Gloom:         789ABC
+                 Ruby:         789                 Doom:            ABC
+              Emerald:         789                 Evil:            ABC
+             Sapphire:         789                 Ruin:            ABC
+              Diamond:         789                Death:            ABC
+
+            (*) A stands for Boss #10,
+                B stands for Boss #11,
+                C stands for Boss #12
+          </code></pre></figure>
+          <p>Since the map's Prefix is Graphite, we know that the starting Monster Rank must be from 1 to 4. The Suffix is Doubt, so the Boss must be from #1 to #6. But we also know that the Grotto Rank is 1, so that means the starting Monster Rank cannot be greater than 3, and the boss cannot be higher than #3.</p>
+          <p>Lastly, let's look at the Locale. There are 8 Locale Ranks, and they each determine a range of possible Depths. These are as follows:</p>
+          <table>
+            <tr>
+              <th>Locale Rank</th>
+              <th>Depth</th>
+              <th>Environs</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>2-7</td>
+              <td>Tunnel [Ruins], Cave [Caves/Fire/Water/Ice]</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>2-11</td>
+              <td>Marsh [Water], Crevasse [Ice], Mine [Caves/Ruins/Fire]</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>4-13</td>
+              <td>Crater [Fire], Lake [Water], Icepit [Ice], Lair [Caves/Ruins]</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>6-15</td>
+              <td>Dungeon [Fire], Moor [Water], Snowhall [Ice], Path [Caves/Ruins]</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>8-15</td>
+              <td>Crypt [Caves/Ruins/Fire/Water/Ice]</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>10-16</td>
+              <td>Ruins [Ruins], Waterway [Water], Tundra [Ice], Nest [Caves/Fire]</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>12-16</td>
+              <td>World [Caves/Ruins/Fire/Water/Ice]</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>14-16</td>
+              <td>Abyss [Caves], Maze [Ruins], Void [Fire], Chasm [Water], Glacier [Ice]</td>
+            </tr>
+          </table>
+          <p>The Locale for our map is Mine. So we can see that this is a Rank 2 Locale with a possible Depth of 2 to 11, and Caves, Ruins and Fire as possible Environs. However, we still know that the Grotto Rank is 1, which only permits a Depth of 2 to 4.</p>
+          <p>So from the name alone, we know that the Depth is between 2 to 4 floors, the starting Monster Rank is between 1 and 3, the Boss is #1, #2, or #3, and the Environ is either Caves, Ruins or Fire.</p>
+          <p>Lastly let's look at the Level again. It was a Lv. 3 map. This means that the Base level could not have been higher than 6, since that's the highest multiple of 3 that is not more than 5 levels higher than the Level of our map. Also, the Base Level can be no lower than 0, since that is the lowest possible Base Level that is still within the +/-5 levels of Lv. 3.</p>
+          <p>Remember that a Depth of 2, a starting Monster Rank of 1 and Boss #1 would create a Base Level of 0, and that each increase would push the level up by 3. From this, we know that only two increases are possible, so we can further narrow the choices to the following possible combinations:</p>
+          <table>
+            <tr>
+              <td>Depth of 2, MRank of 1, Boss #1</td>
+              <td>Depth of 3, MRank of 1, Boss #1</td>
+            </tr>
+            <tr>
+              <td>Depth of 2, MRank of 2, Boss #1</td>
+              <td>Depth of 2, MRank of 1, Boss #2</td>
+            </tr>
+            <tr>
+              <td>Depth of 4, MRank of 1, Boss #1</td>
+              <td>Depth of 3, MRank of 2, Boss #1</td>
+            </tr>
+            <tr>
+              <td>Depth of 3, MRank of 1, Boss #2</td>
+              <td>Depth of 2, MRank of 3, Boss #1</td>
+            </tr>
+            <tr>
+              <td>Depth of 2, MRank of 2, Boss #2</td>
+              <td>Depth of 2, MRank of 1, Boss #3</td>
+            </tr>
+          </table>
+          <p>We could visit the grotto next and take note of the monsters on the first floor, and identify what Monster Rank it is. If we did that, we would find that the Monster Rank was 1, thus further narrowing the choices. We'd also learn at this point that the grotto's Environ was definitely Ruins. Eventually, after fully exploring the grotto, we would learn that it had a Depth of 4 and Equinox as its boss.</p>
+          <p>A different grotto might have had a name that could've allowed us to narrow things down further. For instance, if you knew you had a Grotto Rank of at least 6 (FQ of 101-120), then you'd know that the Monster Rank could be no lower than 4. So if you got a Prefix of Graphite, then you’d also know that the starting Monster Rank of that grotto must be exactly 4, since Graphite only allows a range of 1 to 4.</p>
+          <p>Could we have identified "Graphite Mine of Doubt Lv. 3" better? Well, for unique grottoes, we noted that they can only be in one of up to 3 possible locations. Our FQ 2/Seed 0 grotto has two possible locations, in fact: just outside of Slurry Quay (#34) and a bit to the north of the Heights of Loneliness (#42). From just the name and the location, could we have known exactly which grotto it was? Well, not without the proper tools or outside information that tell us exactly where that FQ/Seed combination can be, and in this case, we would actually only narrow it down to two possible grottoes. There's another "Graphite Mine of Doubt Lv. 3" that resides at #34 which as a Depth of 2 (instead of 4) and a Monster Rank of 3 (instead of 1). And another identically named map at Location #42 which has a Depth of 2 (instead of 4) and the Caves Environ (instead of Ruins). These two grottos also have completely different seeds, which means that the grotto interiors would be very different as well.</p>
+        </section>
+      </section>
+      <section id='2-3-inside-the-grotto'>
+        <header>
+          <h2>2.3 Inside the Grotto</h2>
+        </header>
+        <section id='2-3-1-monster-encounters'>
+          <header>
+            <h3>2.3.1 Monster Encounters</h3>
+          </header>
+          <p>Once we delve into the grotto, we will start encountering its inhabitants: the random monsters that pervade each floor. The monsters we find are determined by the Monster Rank of the floor we're on and the Environ of the grotto: we'd encounter different monsters in Ice grottos than we would in Caves or Ruins, for example.</p>
+          <p>First, the Monster Rank. Remember that the starting Monster rank is determined by the grotto itself, and this gives us the Monster Rank of floors 1 to 4. At 5F to 8F, the Monster Rank increases by 1. At 9F to 12F, the Monster Rank increases again to 2 greater than the starting rank. At 13F to 16F, it increases one final tome to +3 over the starting rank.</p>
+          <p>With the correct Monster Rank and Environ in hand, a single monster (which we will call a Wandering Monster) is then randomly chosen out of the correct encounter list. The Wandering Monster will then appear in the grotto relatively nearby (and often in the direct you're currently facing), and start wandering around.</p>
+          <p>If you run into the Wandering Monster, you will then face an encounter against a group of that particular monster, and possibly a Support comprising of up to two extra groups of various monsters, again based on the current Monster Rank and Environ. Note that there are sometimes monster that can only appear as Support on a given Rank/Environ combination, just as there are sometimes monsters that can only appear as Wandering Monsters, not as Support.</p>
+          <p>The following tables contain the full encounter data for each of the Monster Ranks in the various Environs. There are two tables per section: the left side of each Monster Rank/Environ combination contains the Wandering Monster table, and the right side contains the Support table.</p>
+          <p>As an example, let's look at the table for Monster Rank 3 in Ruins Environ: </p>
+          <table>
+            <caption>Ruins - Monster Rank 3 (4 Monsters Max)</caption>
+            <tr>
+              <th colspan='4'>Wandering Monsters</th>
+              <th colspan='3'>Support</th>
+            </tr>
+            <tr>
+              <th>Spawn Chance</th>
+              <th>Group Count</th>
+              <th>Name</th>
+              <th>Chance of Any Supports</th>
+              <th>Spawn Chance</th>
+              <th>Group Count</th>
+              <th>Name</th>
+            </tr>
+            <tr>
+              <td>7/35</td>
+              <td>1-3x</td>
+              <td>Mushroom Mage</td>
+              <td>4/10 2/10</td>
+              <td>3/21</td>
+              <td>1-4x</td>
+              <td>Mushroom Mage</td>
+            </tr>
+            <tr>
+              <td>7/35</td>
+              <td>1-3x</td>
+              <td>Purrestidigitator</td>
+              <td>4/12 2/12</td>
+              <td>3/21</td>
+              <td>1-4x</td>
+              <td>Mushroom Mage</td>
+            </tr>
+            <tr>
+              <td>7/35</td>
+              <td>1-3x</td>
+              <td>Dread Admiral</td>
+              <td>4/11 1/11</td>
+              <td>3/21</td>
+              <td>1-4x</td>
+              <td>Dread Admiral</td>
+            </tr>
+            <tr>
+              <td>7/35</td>
+              <td>1-2x</td>
+              <td>Big Badboon</td>
+              <td>4/11 1/11</td>
+              <td>4/21</td>
+              <td>1-2x</td>
+              <td>Big Badboon</td>
+            </tr>
+            <tr>
+              <td>7/35</td>
+              <td>1-2x</td>
+              <td>Chimaera</td>
+              <td>4/11 1/11</td>
+              <td>4/21</td>
+              <td>1-3x</td>
+              <td>Chimaera</td>
+            </tr>
+            <tr>
+              <td colspan='4'>---</td>
+              <td>3/21</td>
+              <td>1-3x</td>
+              <td>Crabid</td>
+            </tr>
+          </table>
+          <p>The first number for the Wandering Monster table is the chance that each monster will appear. For example, a Bagma will appear as a Wandering Monster 7/22nds of the time out of the 4 possible choices, while Metal Medleys will only appear 1/22nd of the time.</p>
+          <p>The second group of numbers are the amount of that monster you will encounter in its group: the Bagma group will have between 1 to 4 Bagmas for you to battle. After this number comes the name of the monster itself.</p>
+          <p>The final group of numbers are the chances of a Support group appearing. There are two numbers, listed as "x/n y/n", which are two mutually exclusive chances. x/n is the chance there will be 1 Support Group, and y/n is the chance that there will be 2 Support Groups. If there is no second number (y/n), then only 1 Support Group can ever appear for this Wandering Monster. If “—Alone—“ is written instead, then that particular Wandering Monster will never come with Support. In this case, Bagmas will never appear with support. Metal Medleys, however, will have a 2/12 chance of coming with 2 Support Groups and a 4/12 chance of coming with 1 Support Group. And they will have a (12 - 4 - 2)/12 = 6/12 chance of having no Support Groups.</p>
+          <p>To the right of the Wandering Monster table is the Support table, which indicates which monsters can turn up as Support on that floor. The first number in the Support table is the chance that that monster will be chosen as a Support Group: for instance, there is a 1/20 chance that a Metal Medley will be chosen as Support. The line of dashes also indicate that Bagmas can never appear as Support in this table.</p>
+          <p>The second group of numbers is the amount of monsters in that Support Group. A Metal Medley Support Group can have between 1 and 3 enemies in it. Note that this range can be different to the number of Metal Medleys allowed in the main Wandering Monster group. And after this number is the name of the monster itself.</p>
+          <p>So we can see that we could have, say, a 1/22 chance of a Metal Medley appearing as a particular Wandering Monster in Ruins Monster Rank 3. If we then ran into it, we would face a group of 1-2 Metal Medleys, with a 2/12 chance of 2 Support Groups turning up, and a 4/12 chance of just 1 Support Group. These Support Groups would have a 1/20 chance each of also being Metal Medleys, arriving with between 1 to 3 of them in each group. We could have up to 8 Metal Medleys (1 group of 2, 2 groups of 3) in the same fight if the dice rolled that way, as a result.</p>
+          <p>However, there is one extra mechanic that prevents many monsters from appearing: the maximum number of monsters that can appear in battle on that floor. This is listed above the table as "x Monsters Max", where x is either 3 or 4 depending on the table. This means we cannot have a fight against 8 Metal Medleys, because only 4 are able to appear. Surplus monsters are deleted by going through each group and removing between 1 and 4 monsters at a time (depending on how high above the limit we were) until the total number of monsters is within the allowed limit. The following rules are used for this:</p>
+          <ul>
+            <li>Monsters are removed from Group 1 (Wandering Monster Group) first, then Group 2 and finally Group 3, checking whether we've brought the total under the limit after each group. If it's still over the limit after all three groups have been reduced, then it starts again from Group 1 and removes more monsters.</li>
+            <li>The number of monsters removed each time we check a group is 1 if we were 1 to 5 over the limit; 2 if we were 6 to 8 over the limit; 3 if we were 9 to 11 over the limit; and 4 if we were 12 or more over the limit.</li>
+            <li>Group 1 (Wandering Monster Group) cannot be reduced to less than 1 monster in the group. The other two Groups can be removed entirely if necessary.</li>
+          </ul>
+          <p>So with our 2/3/3 group of Metal Medleys, we are 4 monsters over the limit, so 1 monster is removed from each pass. After the first pass, we’re down to 1/2/2 which is 5 monsters, but we’re still over the limit. It starts from Group 1 again, but can’t reduce Group 1 below a single monster. Group 2 is reduced to 1, and we don’t look at Group 3 because we’re finally below the limit. We end up facing a group of 1/2/2 Metal Medleys. </p>
+          <br>
+          <p>The Support table is aligned such that the entries line up with monsters in the Wandering Monster table. That means that the Metal Medley data as a wandering monster will be on the same line as the Metal Medley data as a Support Monster. If a Wandering Monster cannot appear as Support on that floor, then a row of dashes will replace its entry in the Support table. Any monster will appear on its own line after the wandering monster table is finished. For instance, Gum Shields can only appear as Support in Ruins Monster Rank 3.</p>
+          <p>With the tables explained, we’ll end this section with the data itself. However, be aware that there is a known bug with the game with regards to Wandering Monsters that impacts encounter chances; we will cover this bug in more detail in Section 2.3.3 "The Wandering Monster Bug" .</p>
+          <!-- TODO: Write a script to generate the tables that go here! -->
+          <!-- all right, about an hour of work to finish the script. It's at
+               parse-tables.js -- run it with a recent version of Node. -->
+        </section>
+      </section>
+    </section>
+
+<!-- fair warning: this was automatically generated! Don't modify it, modify,
+     re-run, and copy-paste the output of parse-tables.js! -->
+<table>
+  <caption>Caves - Monster Rank 1 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Mushroom Mage</td>
+    <td>4/10 2/10</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Purrestidigitator</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Dread Admiral</td>
+    <td>4/10 2/10</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Big Badboon</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Chimaera</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Caves - Monster Rank 2 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Pink Sanguini</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Scourgette</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Bewarewolf</td>
+    <td>4/10 2/10</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Mandrake Major</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Drackal</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Caves - Monster Rank 3 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Sluggernaut</td>
+    <td>4/10 1/10</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Brainy Badboon</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Treevil</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Peckerel</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Crabber Dabber Doo</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Caves - Monster Rank 4 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Bomboulder</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Swinoceros</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Live Lava</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Drakularge</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Cyclops</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Caves - Monster Rank 5 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Gloomy Gastropog</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Splatterhorn</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Cumulus Rex</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Terrorhawk</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Boss Troll</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Caves - Monster Rank 6 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Freezing Fog</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Mandrake Marshal</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Blastoad</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Green Dragon</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Claws</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Caves - Monster Rank 7 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>2/28</td>
+    <td>1x</td>
+    <td>Gem Jamboree</td>
+    <td>4/10 ====</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/28</td>
+    <td>2x</td>
+    <td>Mandrake Marshal</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/28</td>
+    <td>2x</td>
+    <td>King Cureslime</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/28</td>
+    <td>1x</td>
+    <td>Cumulus Vex</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/28</td>
+    <td>2x</td>
+    <td>Cobra Cardinal</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Caves - Monster Rank 8 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>6/33</td>
+    <td>3x</td>
+    <td>Genie Sanguini</td>
+    <td>4/ 6 2/ 6</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/33</td>
+    <td>2x</td>
+    <td>Prism Peacock</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/33</td>
+    <td>1x</td>
+    <td>Moai Minstrel</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/33</td>
+    <td>1x</td>
+    <td>King Crab</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/33</td>
+    <td>1x</td>
+    <td>Terror Troll</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Caves - Monster Rank 9 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/33</td>
+    <td>2x</td>
+    <td>Sluggerslaught</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/33</td>
+    <td>1x</td>
+    <td>Drakulard</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/33</td>
+    <td>1x</td>
+    <td>Cosmic Chimaera</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/33</td>
+    <td>1x</td>
+    <td>Terror Troll</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/33</td>
+    <td>1x</td>
+    <td>Wishmaster</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Caves - Monster Rank 10 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>1/27</td>
+    <td>2x</td>
+    <td>Metal King Slime</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/27</td>
+    <td>2x</td>
+    <td>Cosmic Chimaera</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/27</td>
+    <td>1x</td>
+    <td>Cumulus Hex</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/27</td>
+    <td>1x</td>
+    <td>Stale Whale</td>
+    <td>==Alone==</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/27</td>
+    <td>1x</td>
+    <td>Wishmaster</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Caves - Monster Rank 11 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>4/30</td>
+    <td>2x</td>
+    <td>Sluggerslaught</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/30</td>
+    <td>1x</td>
+    <td>Godsteed</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/30</td>
+    <td>1x</td>
+    <td>Slionheart</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/30</td>
+    <td>2x</td>
+    <td>Cosmic Chimaera</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/30</td>
+    <td>1x</td>
+    <td>Stale Whale</td>
+    <td>==Alone==</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Caves - Monster Rank 12 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>6/32</td>
+    <td>1x</td>
+    <td>Godsteed</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/32</td>
+    <td>1x</td>
+    <td>Slionheart</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/32</td>
+    <td>1x</td>
+    <td>Wonder Wyrtle</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/32</td>
+    <td>1x</td>
+    <td>Cumulus Hex</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/32</td>
+    <td>1x</td>
+    <td>Widow's Pique</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ruins - Monster Rank 1 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Earthenwarrior</td>
+    <td>4/10 2/10</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Restless Armour</td>
+    <td>==Alone==</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Magus</td>
+    <td>4/10 2/10</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Expload</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Stone Golem</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ruins - Monster Rank 2 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Raving Lunatick</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Manguini</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Trigertaur</td>
+    <td>4/10 2/10</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Mad Moai</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Troll</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ruins - Monster Rank 3 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/22</td>
+    <td>4x</td>
+    <td>Bagma</td>
+    <td>==Alone==</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>1/22</td>
+    <td>2x</td>
+    <td>Metal Medley</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/22</td>
+    <td>2x</td>
+    <td>Gramarye Gruffon</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/22</td>
+    <td>2x</td>
+    <td>Hunter Mech</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ruins - Monster Rank 4 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Sluggernaut</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Teaky Mask</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Sorcerer</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Raving Reaper</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Living Statue</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ruins - Monster Rank 5 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Teaky Mask</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Corrupt Carter</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Killing Machine</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Sculpture Vulture</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Boss Troll</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ruins - Monster Rank 6 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Blastoad</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Sick Trigertaur</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Golem</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Cobra Cardinal</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Claws</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ruins - Monster Rank 7 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>1/23</td>
+    <td>3x</td>
+    <td>Liquid Metal Slime</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>5/23</td>
+    <td>1x</td>
+    <td>Darkonium Slime</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/23</td>
+    <td>1x</td>
+    <td>Great Troll</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/23</td>
+    <td>2x</td>
+    <td>Claws</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>3/23</td>
+    <td>1x</td>
+    <td>Octagoon</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ruins - Monster Rank 8 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>3/21</td>
+    <td>2x</td>
+    <td>Sluggerslaught</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>2/21</td>
+    <td>2x</td>
+    <td>Gem Jamboree</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>4/21</td>
+    <td>2x</td>
+    <td>Barbatos</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/21</td>
+    <td>2x</td>
+    <td>Darkonium Slime</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>5/21</td>
+    <td>2x</td>
+    <td>Octagoon</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ruins - Monster Rank 9 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>3/25</td>
+    <td>2x</td>
+    <td>Sluggerslaught</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>3/25</td>
+    <td>2x</td>
+    <td>Darkonium Slime</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/25</td>
+    <td>2x</td>
+    <td>Alarmour</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>5/25</td>
+    <td>2x</td>
+    <td>Freaky Tiki</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/25</td>
+    <td>3x</td>
+    <td>Octagoon</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ruins - Monster Rank 10 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>1/27</td>
+    <td>2x</td>
+    <td>Gem Jamboree</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/27</td>
+    <td>2x</td>
+    <td>Alarmour</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/27</td>
+    <td>2x</td>
+    <td>Freaky Tiki</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/27</td>
+    <td>2x</td>
+    <td>Boa Bishop</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/27</td>
+    <td>1x</td>
+    <td>Cyber Spider</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ruins - Monster Rank 11 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>2/27</td>
+    <td>1x</td>
+    <td>Gem Slime</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>4/27</td>
+    <td>1x</td>
+    <td>Alphyn</td>
+    <td>==Alone==</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/27</td>
+    <td>2x</td>
+    <td>Freaky Tiki</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/27</td>
+    <td>2x</td>
+    <td>Boa Bishop</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/27</td>
+    <td>1x</td>
+    <td>Cyber Spider</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ruins - Monster Rank 12 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>4/18</td>
+    <td>1x</td>
+    <td>AU</td>
+    <td>==Alone==</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>4/18</td>
+    <td>1x</td>
+    <td>Void Droid</td>
+    <td>==Alone==</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>3/18</td>
+    <td>1x</td>
+    <td>Alphyn</td>
+    <td>==Alone==</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>1/18</td>
+    <td>1x</td>
+    <td>Platinum King Jewel  4/12 1/12    1/27  1</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/18</td>
+    <td>1x</td>
+    <td>Cyber Spider</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ice - Monster Rank 1 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/28</td>
+    <td>3x</td>
+    <td>Lost Soul</td>
+    <td>4/10 2/10</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/28</td>
+    <td>3x</td>
+    <td>Toxic Zombie</td>
+    <td>4/10 2/10</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/28</td>
+    <td>2x</td>
+    <td>Spinchilla</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/28</td>
+    <td>3x</td>
+    <td>Mummy</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ice - Monster Rank 2 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Sootheslime</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Deadcurion</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Scarewolf</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Rampage</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Sculptrice</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ice - Monster Rank 3 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Ghoul</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Mummy</td>
+    <td>4/10 2/10</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>White Trigertaur</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>4x</td>
+    <td>Shivery Shrubbery</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Apeckalypse</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ice - Monster Rank 4 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Skeleton Soldier</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Lethal Armour</td>
+    <td>==Alone==</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Great Gruffon</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>White Trigertaur</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Cyclops</td>
+    <td>4/10 1/10</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ice - Monster Rank 5 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Grim Grinner</td>
+    <td>4/10 2/10</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Drastic Drackal</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Aggrosculpture</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Cyclops</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Icikiller</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ice - Monster Rank 6 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Killing Machine</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Cumulus Vex</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Bad Karmour</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Aggrosculpture</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Icikiller</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ice - Monster Rank 7 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Freezing Fog</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Cumulus Vex</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Bad Karmour</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Wight King</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Great Troll</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ice - Monster Rank 8 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>6/33</td>
+    <td>3x</td>
+    <td>Belisha Beakon</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/33</td>
+    <td>2x</td>
+    <td>Night Knight</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/33</td>
+    <td>1x</td>
+    <td>Firn Fiend</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/33</td>
+    <td>2x</td>
+    <td>Charmour</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/33</td>
+    <td>2x</td>
+    <td>Cannibelle</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ice - Monster Rank 9 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/33</td>
+    <td>2x</td>
+    <td>Darkonium Slime</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/33</td>
+    <td>2x</td>
+    <td>Firn Fiend</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/33</td>
+    <td>2x</td>
+    <td>Wight Emperor</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/33</td>
+    <td>2x</td>
+    <td>Grim Reaper</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/33</td>
+    <td>2x</td>
+    <td>Cannibelle</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ice - Monster Rank 10 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>1/20</td>
+    <td>1x</td>
+    <td>Gem Slime</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/20</td>
+    <td>2x</td>
+    <td>Grrrgoyle</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/20</td>
+    <td>2x</td>
+    <td>Wight Emperor</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/20</td>
+    <td>2x</td>
+    <td>Grim Reaper</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ice - Monster Rank 11 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/26</td>
+    <td>1x</td>
+    <td>Geothaum</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/26</td>
+    <td>2x</td>
+    <td>Grrrgoyle</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/26</td>
+    <td>2x</td>
+    <td>Grim Reaper</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/26</td>
+    <td>1x</td>
+    <td>Uncommon Cold</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Ice - Monster Rank 12 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>6/25</td>
+    <td>2x</td>
+    <td>Geothaum</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/25</td>
+    <td>1x</td>
+    <td>Blight Knight</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/25</td>
+    <td>2x</td>
+    <td>Boogie Manguini</td>
+    <td>4/ 9 1/ 9</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/25</td>
+    <td>1x</td>
+    <td>Uncommon Cold</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Fire - Monster Rank 1 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Axolhotl</td>
+    <td>4/10 1/10</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Rockbomb</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Metal Slime Knight</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Admirer</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Mad Moai</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Fire - Monster Rank 2 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Sorcerer</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Mandrake Major</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Hocus Chimaera</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Gold Golem</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Power Hammer</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Fire - Monster Rank 3 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>4x</td>
+    <td>Robo</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Goodybag</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Infernal Armour</td>
+    <td>==Alone==</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Chimaera</td>
+    <td>4/10 2/10</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Troll</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Fire - Monster Rank 4 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>1/29</td>
+    <td>3x</td>
+    <td>Liquid Metal Slime</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/29</td>
+    <td>4x</td>
+    <td>Bagma</td>
+    <td>==Alone==</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/29</td>
+    <td>3x</td>
+    <td>Infernal Armour</td>
+    <td>==Alone==</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/29</td>
+    <td>1x</td>
+    <td>Moosifer</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/29</td>
+    <td>2x</td>
+    <td>Hunter Mech</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Fire - Monster Rank 5 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Live Lava</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Mandrake Marauder</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Badja</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Moosifer</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Mega Moai</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Fire - Monster Rank 6 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Hell Nino</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Whirly Girly</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Killing Machine</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Harmour</td>
+    <td>4/10 1/10</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Magmalice</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Fire - Monster Rank 7 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Red Dragon</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Harmour</td>
+    <td>4/10 2/10</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Fright Knight</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Prism Peacock</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Magmalice</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Fire - Monster Rank 8 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/33</td>
+    <td>2x</td>
+    <td>Fright Knight</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/33</td>
+    <td>2x</td>
+    <td>Cobra Cardinal</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/33</td>
+    <td>1x</td>
+    <td>Tantamount</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/33</td>
+    <td>1x</td>
+    <td>Gigantes</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/33</td>
+    <td>2x</td>
+    <td>Flamin' Drayman</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Fire - Monster Rank 9 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>2/28</td>
+    <td>2x</td>
+    <td>Metal King Slime</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/28</td>
+    <td>1x</td>
+    <td>Tantamount</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/28</td>
+    <td>2x</td>
+    <td>Barriearthenwarrior  4/11 1/11    7/34  1</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/28</td>
+    <td>2x</td>
+    <td>Flamin' Drayman</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/28</td>
+    <td>1x</td>
+    <td>Terror Troll</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Fire - Monster Rank 10 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/29</td>
+    <td>2x</td>
+    <td>Bird of Terrordise</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/29</td>
+    <td>2x</td>
+    <td>Barriearthenwarrior  4/11 1/11    6/36  1</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>3/29</td>
+    <td>2x</td>
+    <td>Flamin' Drayman</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/29</td>
+    <td>1x</td>
+    <td>Terror Troll</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/29</td>
+    <td>1x</td>
+    <td>Scarlet Fever</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Fire - Monster Rank 11 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/32</td>
+    <td>1x</td>
+    <td>Rashaverak</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/32</td>
+    <td>2x</td>
+    <td>Bird of Terrordise</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/32</td>
+    <td>2x</td>
+    <td>Barriearthenwarrior  4/11 1/11    5/36  1</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/32</td>
+    <td>1x</td>
+    <td>Scarlet Fever</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/32</td>
+    <td>1x</td>
+    <td>Hell's Gatekeeper</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Fire - Monster Rank 12 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>6/28</td>
+    <td>1x</td>
+    <td>Rashaverak</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/28</td>
+    <td>2x</td>
+    <td>Bird of Terrordise</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>3/28</td>
+    <td>1x</td>
+    <td>Vermil Lion</td>
+    <td>==Alone==</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/28</td>
+    <td>1x</td>
+    <td>Master Moosifer</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/28</td>
+    <td>1x</td>
+    <td>Hell's Gatekeeper</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Water - Monster Rank 1 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Salamarauder</td>
+    <td>4/13 2/13</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Lesionnaire</td>
+    <td>4/10 2/10</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Knocktopus</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Claw Hammer</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Riptide</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Water - Monster Rank 2 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Giddy Gastropog</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Mortoad</td>
+    <td>4/13 2/13</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Shocktopus</td>
+    <td>4/13 2/13</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>King Slime</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Python Priest</td>
+    <td>4/10 1/10</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Water - Monster Rank 3 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Diethon</td>
+    <td>4/13 2/13</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Blood Mummy</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Great Gruffon</td>
+    <td>4/13 2/13</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Wight Priest</td>
+    <td>4/ 9 1/ 9</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Riptide</td>
+    <td>4/10 2/10</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Water - Monster Rank 4 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Cureslime</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Sail Serpent</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Bloody Manguini</td>
+    <td>4/13 2/13</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Handsome Crab</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Seasaur</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Water - Monster Rank 5 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Dark Skeleton</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Stenchurion</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Wyrtoise</td>
+    <td>4/13 2/13</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>King Cureslime</td>
+    <td>4/13 2/13</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Abyss Diver</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Water - Monster Rank 6 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>Dark Skeleton</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Barbatos</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Green Dragon</td>
+    <td>4/11 2/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>King Cureslime</td>
+    <td>4/13 2/13</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>2x</td>
+    <td>King Crab</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Water - Monster Rank 7 (4 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>3x</td>
+    <td>Genie Sanguini</td>
+    <td>4/ 6 2/ 6</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Barbatos</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Drakulard</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>Gigantes</td>
+    <td>4/13 2/13</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/35</td>
+    <td>1x</td>
+    <td>King Crab</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Water - Monster Rank 8 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>2/28</td>
+    <td>2x</td>
+    <td>Metal King Slime</td>
+    <td>4/13 2/13</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/28</td>
+    <td>1x</td>
+    <td>Gigantes</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/28</td>
+    <td>2x</td>
+    <td>Charmour</td>
+    <td>4/13 2/13</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/28</td>
+    <td>1x</td>
+    <td>Moai Minstrel</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/28</td>
+    <td>1x</td>
+    <td>Slugly Betsy</td>
+    <td>4/12 2/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Water - Monster Rank 9 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/33</td>
+    <td>2x</td>
+    <td>Mandrake Monarch</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/33</td>
+    <td>2x</td>
+    <td>Charmour</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/33</td>
+    <td>1x</td>
+    <td>Moai Minstrel</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/33</td>
+    <td>2x</td>
+    <td>Boogie Manguini</td>
+    <td>4/ 9 1/ 9</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/33</td>
+    <td>1x</td>
+    <td>Slugly Betsy</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Water - Monster Rank 10 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>6/32</td>
+    <td>2x</td>
+    <td>Mandrake Monarch</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/32</td>
+    <td>2x</td>
+    <td>Boogie Manguini</td>
+    <td>4/ 9 1/ 9</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/32</td>
+    <td>3x</td>
+    <td>Bling Badger</td>
+    <td>4/10 1/10</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/32</td>
+    <td>1x</td>
+    <td>Prime Slime</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/32</td>
+    <td>1x</td>
+    <td>Slugly Betsy</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Water - Monster Rank 11 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>7/32</td>
+    <td>1x</td>
+    <td>Drakulord</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/32</td>
+    <td>2x</td>
+    <td>Boogie Manguini</td>
+    <td>4/ 9 1/ 9</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/32</td>
+    <td>3x</td>
+    <td>Bling Badger</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/32</td>
+    <td>2x</td>
+    <td>Hammer Horror</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/32</td>
+    <td>1x</td>
+    <td>Prime Slime</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+<table>
+  <caption>Water - Monster Rank 12 (3 Monsters Max)</caption>
+  <tr>
+    <th colspan='4'>Wandering Monsters</th>
+    <th colspan='3'>Support</th>
+  </tr>
+  <tr>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+    <th>Chance of Any Supports</th>
+    <th>Spawn Chance</th>
+    <th>Group Count</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>6/28</td>
+    <td>1x</td>
+    <td>Drakulord</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/28</td>
+    <td>2x</td>
+    <td>Hammer Horror</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>7/28</td>
+    <td>1x</td>
+    <td>Seavern</td>
+    <td>4/12 1/12</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>6/28</td>
+    <td>1x</td>
+    <td>Prime Slime</td>
+    <td>4/11 1/11</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td>3/28</td>
+    <td>1x</td>
+    <td>Pale Whale</td>
+    <td>==Alone==</td>
+    <td colspan='3'>---</td>
+  </tr>
+  <tr>
+    <td colspan='4'>---</td>
+    <td colspan='3'>---</td>
+  </tr>
+</table><br>
+[Finished in 0.1s]<!-- okay, it's done :) -->
+
+    <script type="text/javascript">
+      prefix();
+      var tables = document.getElementsByTagName('table');
+      for (var i = 0; i < tables.length; i++) {
+        tables[i].setAttribute('cellspacing',  0);
+      }
+    </script>
+  </body>
+</html>
